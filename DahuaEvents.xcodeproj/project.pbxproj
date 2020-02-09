@@ -15,6 +15,8 @@
 		3CFB590C23F0C65500897303 /* TableBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB590A23F0C65500897303 /* TableBackgroundView.swift */; };
 		3CFB590D23F0C65500897303 /* NoContentBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB590B23F0C65500897303 /* NoContentBackground.swift */; };
 		3CFB590F23F0C68600897303 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB590E23F0C68600897303 /* DiscoveryViewController.swift */; };
+		3CFB591923F0CB1A00897303 /* UDPBroadcastConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB591723F0CB1A00897303 /* UDPBroadcastConnection.swift */; };
+		3CFB591A23F0CB1A00897303 /* UDPBroadcastConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB591823F0CB1A00897303 /* UDPBroadcastConnectionError.swift */; };
 		84A5022B23EFBEB7006B60C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5022A23EFBEB7006B60C6 /* AppDelegate.swift */; };
 		84A5022D23EFBEB7006B60C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5022C23EFBEB7006B60C6 /* SceneDelegate.swift */; };
 		84A5023223EFBEB7006B60C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A5023023EFBEB7006B60C6 /* Main.storyboard */; };
@@ -33,8 +35,8 @@
 		3CFB590A23F0C65500897303 /* TableBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableBackgroundView.swift; sourceTree = "<group>"; };
 		3CFB590B23F0C65500897303 /* NoContentBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoContentBackground.swift; sourceTree = "<group>"; };
 		3CFB590E23F0C68600897303 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
-		3CFB591523F0C6E900897303 /* UDPBroadcastConnectionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDPBroadcastConnectionError.swift; sourceTree = "<group>"; };
-		3CFB591623F0C6E900897303 /* UDPBroadcastConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDPBroadcastConnection.swift; sourceTree = "<group>"; };
+		3CFB591723F0CB1A00897303 /* UDPBroadcastConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UDPBroadcastConnection.swift; sourceTree = "<group>"; };
+		3CFB591823F0CB1A00897303 /* UDPBroadcastConnectionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UDPBroadcastConnectionError.swift; sourceTree = "<group>"; };
 		7BF8D9F7989B07DF541889FE /* Pods-DahuaEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DahuaEvents.debug.xcconfig"; path = "Target Support Files/Pods-DahuaEvents/Pods-DahuaEvents.debug.xcconfig"; sourceTree = "<group>"; };
 		84A5022723EFBEB7006B60C6 /* DahuaEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DahuaEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A5022A23EFBEB7006B60C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,11 +86,11 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		3CFB591423F0C6E900897303 /* UDPBroadcast */ = {
+		3CFB591B23F0CB2100897303 /* UDPBroadcast */ = {
 			isa = PBXGroup;
 			children = (
-				3CFB591523F0C6E900897303 /* UDPBroadcastConnectionError.swift */,
-				3CFB591623F0C6E900897303 /* UDPBroadcastConnection.swift */,
+				3CFB591723F0CB1A00897303 /* UDPBroadcastConnection.swift */,
+				3CFB591823F0CB1A00897303 /* UDPBroadcastConnectionError.swift */,
 			);
 			path = UDPBroadcast;
 			sourceTree = "<group>";
@@ -128,7 +130,7 @@
 				3CFB590823F0C62800897303 /* Helpers.swift */,
 				3CFB590B23F0C65500897303 /* NoContentBackground.swift */,
 				3CFB590A23F0C65500897303 /* TableBackgroundView.swift */,
-				3CFB591423F0C6E900897303 /* UDPBroadcast */,
+				3CFB591B23F0CB2100897303 /* UDPBroadcast */,
 				3CFB591023F0C68E00897303 /* Controllers */,
 				3CFB590723F0C4C000897303 /* ONVIF */,
 				3CFB58FE23EFC09100897303 /* Dahua */,
@@ -265,6 +267,7 @@
 			files = (
 				3CFB590D23F0C65500897303 /* NoContentBackground.swift in Sources */,
 				3CFB590523F0C4BC00897303 /* ONVIFQueryService.swift in Sources */,
+				3CFB591923F0CB1A00897303 /* UDPBroadcastConnection.swift in Sources */,
 				3CFB590923F0C62800897303 /* Helpers.swift in Sources */,
 				3CFB58FD23EFC08900897303 /* DahuaAPI.swift in Sources */,
 				3CFB590623F0C4BC00897303 /* ONVIFRequest.swift in Sources */,
@@ -272,6 +275,7 @@
 				84A5022B23EFBEB7006B60C6 /* AppDelegate.swift in Sources */,
 				84A5022D23EFBEB7006B60C6 /* SceneDelegate.swift in Sources */,
 				3CFB590C23F0C65500897303 /* TableBackgroundView.swift in Sources */,
+				3CFB591A23F0CB1A00897303 /* UDPBroadcastConnectionError.swift in Sources */,
 				3CFB590F23F0C68600897303 /* DiscoveryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
