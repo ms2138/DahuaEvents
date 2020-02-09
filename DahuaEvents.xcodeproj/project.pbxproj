@@ -33,6 +33,8 @@
 		3CFB590A23F0C65500897303 /* TableBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableBackgroundView.swift; sourceTree = "<group>"; };
 		3CFB590B23F0C65500897303 /* NoContentBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoContentBackground.swift; sourceTree = "<group>"; };
 		3CFB590E23F0C68600897303 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
+		3CFB591523F0C6E900897303 /* UDPBroadcastConnectionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDPBroadcastConnectionError.swift; sourceTree = "<group>"; };
+		3CFB591623F0C6E900897303 /* UDPBroadcastConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDPBroadcastConnection.swift; sourceTree = "<group>"; };
 		7BF8D9F7989B07DF541889FE /* Pods-DahuaEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DahuaEvents.debug.xcconfig"; path = "Target Support Files/Pods-DahuaEvents/Pods-DahuaEvents.debug.xcconfig"; sourceTree = "<group>"; };
 		84A5022723EFBEB7006B60C6 /* DahuaEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DahuaEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A5022A23EFBEB7006B60C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,15 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		3CFB591423F0C6E900897303 /* UDPBroadcast */ = {
+			isa = PBXGroup;
+			children = (
+				3CFB591523F0C6E900897303 /* UDPBroadcastConnectionError.swift */,
+				3CFB591623F0C6E900897303 /* UDPBroadcastConnection.swift */,
+			);
+			path = UDPBroadcast;
+			sourceTree = "<group>";
+		};
 		5DD6044926413131B115B533 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +128,7 @@
 				3CFB590823F0C62800897303 /* Helpers.swift */,
 				3CFB590B23F0C65500897303 /* NoContentBackground.swift */,
 				3CFB590A23F0C65500897303 /* TableBackgroundView.swift */,
+				3CFB591423F0C6E900897303 /* UDPBroadcast */,
 				3CFB591023F0C68E00897303 /* Controllers */,
 				3CFB590723F0C4C000897303 /* ONVIF */,
 				3CFB58FE23EFC09100897303 /* Dahua */,
