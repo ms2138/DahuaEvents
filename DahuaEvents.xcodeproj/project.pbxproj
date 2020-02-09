@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3CFB58FD23EFC08900897303 /* DahuaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB58FC23EFC08900897303 /* DahuaAPI.swift */; };
+		3CFB590423F0C4BC00897303 /* ONVIFDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB590123F0C4BB00897303 /* ONVIFDiscovery.swift */; };
+		3CFB590523F0C4BC00897303 /* ONVIFQueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB590223F0C4BC00897303 /* ONVIFQueryService.swift */; };
+		3CFB590623F0C4BC00897303 /* ONVIFRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB590323F0C4BC00897303 /* ONVIFRequest.swift */; };
 		84A5022B23EFBEB7006B60C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5022A23EFBEB7006B60C6 /* AppDelegate.swift */; };
 		84A5022D23EFBEB7006B60C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5022C23EFBEB7006B60C6 /* SceneDelegate.swift */; };
 		84A5023223EFBEB7006B60C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A5023023EFBEB7006B60C6 /* Main.storyboard */; };
@@ -19,6 +22,9 @@
 /* Begin PBXFileReference section */
 		34DE03138F89ACB3A7594A9F /* Pods_DahuaEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DahuaEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CFB58FC23EFC08900897303 /* DahuaAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DahuaAPI.swift; sourceTree = "<group>"; };
+		3CFB590123F0C4BB00897303 /* ONVIFDiscovery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ONVIFDiscovery.swift; sourceTree = "<group>"; };
+		3CFB590223F0C4BC00897303 /* ONVIFQueryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ONVIFQueryService.swift; sourceTree = "<group>"; };
+		3CFB590323F0C4BC00897303 /* ONVIFRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ONVIFRequest.swift; sourceTree = "<group>"; };
 		7BF8D9F7989B07DF541889FE /* Pods-DahuaEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DahuaEvents.debug.xcconfig"; path = "Target Support Files/Pods-DahuaEvents/Pods-DahuaEvents.debug.xcconfig"; sourceTree = "<group>"; };
 		84A5022723EFBEB7006B60C6 /* DahuaEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DahuaEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A5022A23EFBEB7006B60C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,13 +56,22 @@
 			path = Dahua;
 			sourceTree = "<group>";
 		};
+		3CFB590723F0C4C000897303 /* ONVIF */ = {
+			isa = PBXGroup;
+			children = (
+				3CFB590123F0C4BB00897303 /* ONVIFDiscovery.swift */,
+				3CFB590223F0C4BC00897303 /* ONVIFQueryService.swift */,
+				3CFB590323F0C4BC00897303 /* ONVIFRequest.swift */,
+			);
+			path = ONVIF;
+			sourceTree = "<group>";
+		};
 		5DD6044926413131B115B533 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				7BF8D9F7989B07DF541889FE /* Pods-DahuaEvents.debug.xcconfig */,
 				A0EAA125DCC1CE911D187FB1 /* Pods-DahuaEvents.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,6 +98,7 @@
 			children = (
 				84A5022A23EFBEB7006B60C6 /* AppDelegate.swift */,
 				84A5022C23EFBEB7006B60C6 /* SceneDelegate.swift */,
+				3CFB590723F0C4C000897303 /* ONVIF */,
 				3CFB58FE23EFC09100897303 /* Dahua */,
 				84A5023023EFBEB7006B60C6 /* Main.storyboard */,
 				84A5023323EFBEBA006B60C6 /* Assets.xcassets */,
@@ -215,7 +231,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CFB590523F0C4BC00897303 /* ONVIFQueryService.swift in Sources */,
 				3CFB58FD23EFC08900897303 /* DahuaAPI.swift in Sources */,
+				3CFB590623F0C4BC00897303 /* ONVIFRequest.swift in Sources */,
+				3CFB590423F0C4BC00897303 /* ONVIFDiscovery.swift in Sources */,
 				84A5022B23EFBEB7006B60C6 /* AppDelegate.swift in Sources */,
 				84A5022D23EFBEB7006B60C6 /* SceneDelegate.swift in Sources */,
 			);
