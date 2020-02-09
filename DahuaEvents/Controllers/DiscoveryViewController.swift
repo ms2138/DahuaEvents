@@ -70,6 +70,62 @@ extension DiscoveryViewController {
 }
 
 extension DiscoveryViewController {
+// MARK: - Authentication and Alerts
+
+    private func showAuthenticationController(completion: @escaping (String?, String?) -> Void) {
+        let alertController = UIAlertController(title: "Authentication Required", message: nil, preferredStyle: .alert)
+        let notificationCenter = NotificationCenter.default
+        
+        var token: Any?
+        
+        let authenticateAction = UIAlertAction(title: "Authenticate", style: .default) { (_) in
+            let usernameTextField = alertController.textFields![0] as UITextField
+            let passwordTextField = alertController.textFields![1] as UITextField
+            
+            notificationCenter.removeObserver(token!)
+            
+            completion(usernameTextField.text, passwordTextField.text)
+        }
+        authenticateAction.isEnabled = false
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in
+            notificationCenter.removeObserver(token!)
+            completion(nil, nil)
+        }
+        
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Username"
+            
+            token = notificationCenter.addObserver(forName: UITextField.textDidChangeNotification,
+                                                   object: textField,
+                                                   queue: OperationQueue.main) { (_) in
+                                                    authenticateAction.isEnabled = textField.text != ""
+            }
+        }
+        
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Password"
+            textField.isSecureTextEntry = true
+        }
+        
+        alertController.addAction(authenticateAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true)
+    }
+    
+    private func showErrorAlertController(_ title: String) {
+        let alertController = UIAlertController(title: title,
+                                                message: nil,
+                                                preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alertController.addAction(okAction)
+        present(alertController, animated: true)
+    }
+}
+
+extension DiscoveryViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
