@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CFB58FD23EFC08900897303 /* DahuaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB58FC23EFC08900897303 /* DahuaAPI.swift */; };
 		84A5022B23EFBEB7006B60C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5022A23EFBEB7006B60C6 /* AppDelegate.swift */; };
 		84A5022D23EFBEB7006B60C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5022C23EFBEB7006B60C6 /* SceneDelegate.swift */; };
 		84A5023223EFBEB7006B60C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A5023023EFBEB7006B60C6 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3CFB58FC23EFC08900897303 /* DahuaAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DahuaAPI.swift; sourceTree = "<group>"; };
 		84A5022723EFBEB7006B60C6 /* DahuaEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DahuaEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A5022A23EFBEB7006B60C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84A5022C23EFBEB7006B60C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CFB58FE23EFC09100897303 /* Dahua */ = {
+			isa = PBXGroup;
+			children = (
+				3CFB58FC23EFC08900897303 /* DahuaAPI.swift */,
+			);
+			path = Dahua;
+			sourceTree = "<group>";
+		};
 		84A5021E23EFBEB7006B60C6 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 			children = (
 				84A5022A23EFBEB7006B60C6 /* AppDelegate.swift */,
 				84A5022C23EFBEB7006B60C6 /* SceneDelegate.swift */,
+				3CFB58FE23EFC09100897303 /* Dahua */,
 				84A5023023EFBEB7006B60C6 /* Main.storyboard */,
 				84A5023323EFBEBA006B60C6 /* Assets.xcassets */,
 				84A5023523EFBEBA006B60C6 /* LaunchScreen.storyboard */,
@@ -135,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CFB58FD23EFC08900897303 /* DahuaAPI.swift in Sources */,
 				84A5022B23EFBEB7006B60C6 /* AppDelegate.swift in Sources */,
 				84A5022D23EFBEB7006B60C6 /* SceneDelegate.swift in Sources */,
 			);
