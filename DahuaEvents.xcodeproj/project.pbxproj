@@ -13,10 +13,13 @@
 		84A5023223EFBEB7006B60C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A5023023EFBEB7006B60C6 /* Main.storyboard */; };
 		84A5023423EFBEBA006B60C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A5023323EFBEBA006B60C6 /* Assets.xcassets */; };
 		84A5023723EFBEBA006B60C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A5023523EFBEBA006B60C6 /* LaunchScreen.storyboard */; };
+		D37D401A8ADB9B8B556132F5 /* Pods_DahuaEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34DE03138F89ACB3A7594A9F /* Pods_DahuaEvents.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34DE03138F89ACB3A7594A9F /* Pods_DahuaEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DahuaEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CFB58FC23EFC08900897303 /* DahuaAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DahuaAPI.swift; sourceTree = "<group>"; };
+		7BF8D9F7989B07DF541889FE /* Pods-DahuaEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DahuaEvents.debug.xcconfig"; path = "Target Support Files/Pods-DahuaEvents/Pods-DahuaEvents.debug.xcconfig"; sourceTree = "<group>"; };
 		84A5022723EFBEB7006B60C6 /* DahuaEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DahuaEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A5022A23EFBEB7006B60C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84A5022C23EFBEB7006B60C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		84A5023323EFBEBA006B60C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84A5023623EFBEBA006B60C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84A5023823EFBEBA006B60C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0EAA125DCC1CE911D187FB1 /* Pods-DahuaEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DahuaEvents.release.xcconfig"; path = "Target Support Files/Pods-DahuaEvents/Pods-DahuaEvents.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D37D401A8ADB9B8B556132F5 /* Pods_DahuaEvents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,11 +50,23 @@
 			path = Dahua;
 			sourceTree = "<group>";
 		};
+		5DD6044926413131B115B533 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7BF8D9F7989B07DF541889FE /* Pods-DahuaEvents.debug.xcconfig */,
+				A0EAA125DCC1CE911D187FB1 /* Pods-DahuaEvents.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		84A5021E23EFBEB7006B60C6 = {
 			isa = PBXGroup;
 			children = (
 				84A5022923EFBEB7006B60C6 /* DahuaEvents */,
 				84A5022823EFBEB7006B60C6 /* Products */,
+				5DD6044926413131B115B533 /* Pods */,
+				D67B4884B2641497A75F705B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +92,14 @@
 			path = DahuaEvents;
 			sourceTree = "<group>";
 		};
+		D67B4884B2641497A75F705B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34DE03138F89ACB3A7594A9F /* Pods_DahuaEvents.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84A5023B23EFBEBA006B60C6 /* Build configuration list for PBXNativeTarget "DahuaEvents" */;
 			buildPhases = (
+				604A926843DD611D76A89A2F /* [CP] Check Pods Manifest.lock */,
 				84A5022323EFBEB7006B60C6 /* Sources */,
 				84A5022423EFBEB7006B60C6 /* Frameworks */,
 				84A5022523EFBEB7006B60C6 /* Resources */,
+				EFF64FF194358501F5F397C8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,6 +167,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		604A926843DD611D76A89A2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DahuaEvents-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFF64FF194358501F5F397C8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DahuaEvents/Pods-DahuaEvents-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DahuaEvents/Pods-DahuaEvents-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DahuaEvents/Pods-DahuaEvents-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		84A5022323EFBEB7006B60C6 /* Sources */ = {
@@ -290,6 +359,7 @@
 		};
 		84A5023C23EFBEBA006B60C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BF8D9F7989B07DF541889FE /* Pods-DahuaEvents.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -307,6 +377,7 @@
 		};
 		84A5023D23EFBEBA006B60C6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0EAA125DCC1CE911D187FB1 /* Pods-DahuaEvents.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
