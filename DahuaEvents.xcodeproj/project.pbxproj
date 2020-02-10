@@ -129,6 +129,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		3CFB592723F1200600897303 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3CFB590A23F0C65500897303 /* TableBackgroundView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		5DD6044926413131B115B533 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,7 +171,7 @@
 				84A5022C23EFBEB7006B60C6 /* SceneDelegate.swift */,
 				3CFB590823F0C62800897303 /* Helpers.swift */,
 				3CFB592623F11FC700897303 /* Protocols */,
-				3CFB590A23F0C65500897303 /* TableBackgroundView.swift */,
+				3CFB592723F1200600897303 /* Views */,
 				3CFB592523F11F4000897303 /* Extensions */,
 				3CFB592023F110BD00897303 /* Models */,
 				3CFB591B23F0CB2100897303 /* UDPBroadcast */,
