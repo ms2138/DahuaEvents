@@ -12,4 +12,8 @@ struct Event {
     var startTime: String
     var endTime: String
     var type: String
+    var fileType: String
+    var filePath: String
+    var channel: String
+    var playbackURL: URL
 }
