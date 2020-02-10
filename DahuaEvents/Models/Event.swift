@@ -9,4 +9,7 @@
 import Foundation
 
 struct Event {
+    var startTime: String
+    var endTime: String
+    var type: String
 }
