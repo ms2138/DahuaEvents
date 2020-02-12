@@ -137,6 +137,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		3CFB592823F3B11600897303 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				84A5023023EFBEB7006B60C6 /* Main.storyboard */,
+				84A5023523EFBEBA006B60C6 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		5DD6044926413131B115B533 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,9 +187,8 @@
 				3CFB591023F0C68E00897303 /* Controllers */,
 				3CFB590723F0C4C000897303 /* ONVIF */,
 				3CFB58FE23EFC09100897303 /* Dahua */,
-				84A5023023EFBEB7006B60C6 /* Main.storyboard */,
+				3CFB592823F3B11600897303 /* Storyboards */,
 				84A5023323EFBEBA006B60C6 /* Assets.xcassets */,
-				84A5023523EFBEBA006B60C6 /* LaunchScreen.storyboard */,
 				84A5023823EFBEBA006B60C6 /* Info.plist */,
 			);
 			path = DahuaEvents;
