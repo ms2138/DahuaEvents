@@ -301,3 +301,10 @@ extension DahuaQueryService {
         return items
     }
 }
+
+extension String {
+    var digits: String {
+        return components(separatedBy: CharacterSet.decimalDigits.inverted)
+            .joined()
+    }
+}
