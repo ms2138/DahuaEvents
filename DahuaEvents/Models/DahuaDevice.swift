@@ -9,5 +9,8 @@
 import Foundation
 
 struct DahuaDevice {
-    
+    var type: String
+    var address: String
+    var serial: String
+    var channels: [Channel]
 }
