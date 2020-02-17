@@ -26,6 +26,7 @@
 		3CFB592E23FA073100897303 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB592D23FA073100897303 /* ChannelViewController.swift */; };
 		3CFB593023FA098600897303 /* DahuaDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB592F23FA098600897303 /* DahuaDevice.swift */; };
 		3CFB593223FA4DC100897303 /* Channel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CFB593123FA4DC100897303 /* Channel.storyboard */; };
+		3CFB593423FA4FB300897303 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB593323FA4FB300897303 /* Credential.swift */; };
 		84A5022B23EFBEB7006B60C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5022A23EFBEB7006B60C6 /* AppDelegate.swift */; };
 		84A5022D23EFBEB7006B60C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5022C23EFBEB7006B60C6 /* SceneDelegate.swift */; };
 		84A5023223EFBEB7006B60C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A5023023EFBEB7006B60C6 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		3CFB592D23FA073100897303 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		3CFB592F23FA098600897303 /* DahuaDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DahuaDevice.swift; sourceTree = "<group>"; };
 		3CFB593123FA4DC100897303 /* Channel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Channel.storyboard; sourceTree = "<group>"; };
+		3CFB593323FA4FB300897303 /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
 		7BF8D9F7989B07DF541889FE /* Pods-DahuaEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DahuaEvents.debug.xcconfig"; path = "Target Support Files/Pods-DahuaEvents/Pods-DahuaEvents.debug.xcconfig"; sourceTree = "<group>"; };
 		84A5022723EFBEB7006B60C6 /* DahuaEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DahuaEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A5022A23EFBEB7006B60C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				3CFB591E23F110A300897303 /* Event.swift */,
 				3CFB592B23F3B23400897303 /* Channel.swift */,
 				3CFB592F23FA098600897303 /* DahuaDevice.swift */,
+				3CFB593323FA4FB300897303 /* Credential.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			files = (
 				3CFB590D23F0C65500897303 /* NoContentBackground.swift in Sources */,
 				3CFB590523F0C4BC00897303 /* ONVIFQueryService.swift in Sources */,
+				3CFB593423FA4FB300897303 /* Credential.swift in Sources */,
 				3CFB591923F0CB1A00897303 /* UDPBroadcastConnection.swift in Sources */,
 				3CFB592423F11F3900897303 /* Date+EXT.swift in Sources */,
 				3CFB592C23F3B23400897303 /* Channel.swift in Sources */,
