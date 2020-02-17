@@ -25,6 +25,7 @@
 		3CFB592C23F3B23400897303 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB592B23F3B23400897303 /* Channel.swift */; };
 		3CFB592E23FA073100897303 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB592D23FA073100897303 /* ChannelViewController.swift */; };
 		3CFB593023FA098600897303 /* DahuaDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB592F23FA098600897303 /* DahuaDevice.swift */; };
+		3CFB593223FA4DC100897303 /* Channel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CFB593123FA4DC100897303 /* Channel.storyboard */; };
 		84A5022B23EFBEB7006B60C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5022A23EFBEB7006B60C6 /* AppDelegate.swift */; };
 		84A5022D23EFBEB7006B60C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5022C23EFBEB7006B60C6 /* SceneDelegate.swift */; };
 		84A5023223EFBEB7006B60C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A5023023EFBEB7006B60C6 /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		3CFB592B23F3B23400897303 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		3CFB592D23FA073100897303 /* ChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
 		3CFB592F23FA098600897303 /* DahuaDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DahuaDevice.swift; sourceTree = "<group>"; };
+		3CFB593123FA4DC100897303 /* Channel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Channel.storyboard; sourceTree = "<group>"; };
 		7BF8D9F7989B07DF541889FE /* Pods-DahuaEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DahuaEvents.debug.xcconfig"; path = "Target Support Files/Pods-DahuaEvents/Pods-DahuaEvents.debug.xcconfig"; sourceTree = "<group>"; };
 		84A5022723EFBEB7006B60C6 /* DahuaEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DahuaEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A5022A23EFBEB7006B60C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				84A5023023EFBEB7006B60C6 /* Main.storyboard */,
 				84A5023523EFBEBA006B60C6 /* LaunchScreen.storyboard */,
 				3CFB592923F3B18900897303 /* Events.storyboard */,
+				3CFB593123FA4DC100897303 /* Channel.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				84A5023723EFBEBA006B60C6 /* LaunchScreen.storyboard in Resources */,
 				3CFB592A23F3B18900897303 /* Events.storyboard in Resources */,
 				84A5023423EFBEBA006B60C6 /* Assets.xcassets in Resources */,
+				3CFB593223FA4DC100897303 /* Channel.storyboard in Resources */,
 				84A5023223EFBEB7006B60C6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
