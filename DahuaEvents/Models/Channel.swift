@@ -8,7 +8,11 @@
 
 import Foundation
 
-struct Channel: Codable {
+struct Channel: Codable, Equatable {
     var name: String
     var number: String
+
+    static func == (lhs: Channel, rhs: Channel) -> Bool {
+        return lhs.number == rhs.number
+    }
 }
