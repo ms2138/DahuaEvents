@@ -15,6 +15,8 @@ class ChannelViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Channels"
+
         showAuthenticationController { [weak self] (username, password) in
             guard let weakSelf = self else { return }
 
