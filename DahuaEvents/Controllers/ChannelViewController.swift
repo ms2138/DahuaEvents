@@ -10,6 +10,7 @@ import UIKit
 
 class ChannelViewController: UITableViewController {
     var device: ONVIFDiscovery?
+    private var channels = [Channel]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,17 +61,21 @@ extension ChannelViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return channels.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "channelCell", for: indexPath)
 
-        // Configure the cell...
+        if channels.count > 0 {
+            let channel = channels[indexPath.row]
+            cell.textLabel?.text = channel.name
+            cell.detailTextLabel?.text = "Channel \(channel.number)"
+        }
 
         return cell
     }
