@@ -14,6 +14,44 @@ class ChannelViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        showAuthenticationController { [weak self] (username, password) in
+            guard let weakSelf = self else { return }
+
+            if let username = username, let password = password,
+                let device = weakSelf.device {
+                weakSelf.createDevice(from: device.ipAddress,
+                                      username: username,
+                                      password: password,
+                                      completion: { (device, credential) in
+                                         if let device = device {
+                                            device.channels.forEach { channel in
+                                                let dahuaQuery = DahuaQueryService(host: device.address,
+                                                                                   username: credential.username,
+                                                                                   password: credential.password)
+                                                // Make a call to getAutoFocusStatus to ensure that the channel is active
+                                                dahuaQuery.getAutoFocusStatus(for: channel.number) { [weak self] (_, error) in
+                                                    guard let weakSelf = self else { return }
+                                                    if error == nil {
+                                                        weakSelf.channels.append(channel)
+
+                                                        weakSelf.channels.sort { $0.number < $1.number }
+
+                                                        DispatchQueue.main.async {
+                                                            if let index = weakSelf.channels.firstIndex(of: channel) {
+                                                                let indexPath = IndexPath(row: index, section: 0)
+
+                                                                weakSelf.tableView.insertRows(at: [indexPath], with: .automatic)
+                                                                weakSelf.tableView.reloadRows(at: [indexPath], with: .automatic)
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                })
+            }
+        }
     }
 }
 
