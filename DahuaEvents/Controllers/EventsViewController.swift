@@ -17,7 +17,16 @@ class EventsViewController: UITableViewController {
 
         guard let url = videoStreamURL else { return }
 
-        loadEvents(for: url)
+        loadEvents(for: url) { [weak self] events in
+            guard let weakSelf = self else { return }
+
+            DispatchQueue.main.async {
+                if let events = events {
+                    weakSelf.events = events
+                    weakSelf.tableView.reloadSections(IndexSet(integer: 0), with: .fade)
+                }
+            }
+        }
     }
 }
 
@@ -36,7 +45,7 @@ extension EventsViewController {
 extension EventsViewController {
     // MARK: Events
 
-    func loadEvents(for url: URL) {
+    func loadEvents(for url: URL, completion: @escaping ([Event]?) -> Void) {
         if let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) {
             if let host = urlComponents.host, let username = urlComponents.user,
                 let password = urlComponents.password {
@@ -52,15 +61,11 @@ extension EventsViewController {
                                          endTime: nextDay?.dateString() ?? startOfDay.dateString(),
                                          directory: "/mnt/dvr/sda0", fileTypes: ["dav", "mp4"],
                                          events: ["VideoMotion"], flags: ["Event", "Timing"],
-                                         streams: ["Main"]) { [weak self] (events, _) in
-                                            guard let weakSelf = self else { return }
-                                            if let events = events {
-                                                weakSelf.events.append(contentsOf: events)
-                                            }
+                                         streams: ["Main"]) { (events, _) in
+                                            completion(events)
                     }
                 }
             }
         }
     }
 }
-
