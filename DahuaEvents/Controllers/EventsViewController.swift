@@ -9,11 +9,15 @@
 import UIKit
 
 class EventsViewController: UITableViewController {
-    var videoStreamURL: String?
+    var videoStreamURL: URL?
     private var events = [Event]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        guard let url = videoStreamURL else { return }
+
+        loadEvents(for: url)
     }
 }
 
