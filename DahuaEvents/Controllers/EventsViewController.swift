@@ -40,6 +40,25 @@ extension EventsViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return events.count
     }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell",
+                                                 for: indexPath)
+
+        if events.count > 0 {
+            let event = events[indexPath.row]
+            let startTime = event.startTime
+            let endTime = event.endTime
+
+            if let startTime = getFormattedDate(from: startTime),
+                let endTime = getFormattedDate(from: endTime) {
+                cell.textLabel?.text = "\(startTime) - \(endTime)"
+                cell.detailTextLabel?.text = "Channel \(event.channel)"
+            }
+        }
+
+        return cell
+    }
 }
 
 extension EventsViewController {
