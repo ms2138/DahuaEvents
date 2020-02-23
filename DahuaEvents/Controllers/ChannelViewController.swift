@@ -11,6 +11,7 @@ import UIKit
 class ChannelViewController: UITableViewController {
     var device: ONVIFDiscovery?
     private var channels = [Channel]()
+    private var credential: Credential?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,18 +23,22 @@ class ChannelViewController: UITableViewController {
 
             if let username = username, let password = password,
                 let device = weakSelf.device {
+
                 weakSelf.createDevice(from: device.ipAddress,
                                       username: username,
                                       password: password,
                                       completion: { (device, credential) in
+
+                                        weakSelf.credential = credential
+
                                          if let device = device {
                                             device.channels.forEach { channel in
                                                 let dahuaQuery = DahuaQueryService(host: device.address,
                                                                                    username: credential.username,
                                                                                    password: credential.password)
                                                 // Make a call to getAutoFocusStatus to ensure that the channel is active
-                                                dahuaQuery.getAutoFocusStatus(for: channel.number) { [weak self] (_, error) in
-                                                    guard let weakSelf = self else { return }
+                                                dahuaQuery.getAutoFocusStatus(for: channel.number) { (_, error) in
+
                                                     if error == nil {
                                                         weakSelf.channels.append(channel)
 
@@ -94,6 +99,14 @@ extension ChannelViewController {
                 }
             }
         }
+    }
+
+    func getRTSPStreamURL(from host: String, credential: Credential, channel: String, streamType: String) -> URL? {
+        let dahuaAPI = DahuaAPI(host: host,
+                                username: credential.username,
+                                password: credential.password)
+
+        return dahuaAPI.getRTSPStreamURL(channel: channel, streamType: streamType)
     }
 }
 
