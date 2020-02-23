@@ -20,7 +20,7 @@ class DiscoveryViewController: UITableViewController, NoContentBackground {
         title = "Devices"
 
         backgroundView.frame = view.frame
-        backgroundView.messageLabel.text = "Peform device discovery"
+        backgroundView.message = "Peform device discovery"
         backgroundView.actionButtonTitle = "Start"
         backgroundView.handler = { [unowned self] in
             self.performDeviceDiscovery()
@@ -44,6 +44,7 @@ extension DiscoveryViewController {
 
                 if self.discoveredDevices.count == 0 {
                     self.backgroundView.stopLoadingOperation()
+                    self.backgroundView.message = "No Devices Found"
                 }
             }
         }
