@@ -189,3 +189,30 @@ extension ChannelViewController {
         present(alertController, animated: true)
     }
 }
+
+extension ChannelViewController {
+    // MARK: - Segue
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+            case "showEvents":
+                if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                    tableView.deselectRow(at: selectedIndexPath, animated: true)
+                    guard let eventsViewController = segue.destination as?
+                        EventsViewController else { return }
+
+                    let channel = channels[selectedIndexPath.row]
+                    if let device = device, let credential = credential {
+                        if let url = self.getRTSPStreamURL(from: device.ipAddress,
+                                                           credential: credential,
+                                                           channel: channel.number,
+                                                           streamType: "0") {
+                            eventsViewController.videoStreamURL = url
+                        }
+                    }
+            }
+            default:
+                preconditionFailure("Segue identifier did not match")
+        }
+    }
+}
