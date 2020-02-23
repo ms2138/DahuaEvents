@@ -79,7 +79,7 @@ extension DiscoveryViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let deviceCount = discoveredDevices.count
 
-        if (deviceCount > 0){
+        if deviceCount > 0 {
             hideBackgroundView()
         } else {
             showBackgroundView()
