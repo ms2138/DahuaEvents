@@ -45,12 +45,7 @@ class ChannelViewController: UITableViewController {
                                                         weakSelf.channels.sort { $0.number < $1.number }
 
                                                         DispatchQueue.main.async {
-                                                            if let index = weakSelf.channels.firstIndex(of: channel) {
-                                                                let indexPath = IndexPath(row: index, section: 0)
-
-                                                                weakSelf.tableView.insertRows(at: [indexPath], with: .automatic)
-                                                                weakSelf.tableView.reloadRows(at: [indexPath], with: .automatic)
-                                                            }
+                                                            weakSelf.tableView.reloadSections(IndexSet(integer: 0), with: .fade)
                                                         }
                                                     }
                                                 }
