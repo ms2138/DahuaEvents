@@ -8,15 +8,21 @@
 
 import UIKit
 
-class ChannelViewController: UITableViewController {
+class ChannelViewController: UITableViewController, NoContentBackground {
     var device: ONVIFDiscovery?
     private var channels = [Channel]()
     private var credential: Credential?
+    let backgroundView = TableBackgroundView(frame: .zero)
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Channels"
+
+        backgroundView.frame = view.frame
+        backgroundView.message = "Loading"
+        backgroundView.startLoadingOperation()
+        tableView.backgroundView = backgroundView
 
         showAuthenticationController { [weak self] (username, password) in
             guard let weakSelf = self else { return }
@@ -46,6 +52,11 @@ class ChannelViewController: UITableViewController {
 
                                                         DispatchQueue.main.async {
                                                             weakSelf.tableView.reloadSections(IndexSet(integer: 0), with: .fade)
+                                                            weakSelf.backgroundView.stopLoadingOperation()
+
+                                                            if weakSelf.channels.count == 0 {
+                                                                weakSelf.backgroundView.message = "No Channels Found"
+                                                            }
                                                         }
                                                     }
                                                 }
@@ -113,6 +124,12 @@ extension ChannelViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if channels.count > 0 {
+            hideBackgroundView()
+        } else {
+            showBackgroundView()
+        }
+
         return channels.count
     }
 

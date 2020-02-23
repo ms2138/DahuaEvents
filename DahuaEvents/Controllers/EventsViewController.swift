@@ -8,14 +8,20 @@
 
 import UIKit
 
-class EventsViewController: UITableViewController {
+class EventsViewController: UITableViewController, NoContentBackground {
     var videoStreamURL: URL?
     private var events = [Event]()
+    let backgroundView = TableBackgroundView(frame: .zero)
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Events"
+
+        backgroundView.frame = view.frame
+        backgroundView.message = "Loading"
+        backgroundView.startLoadingOperation()
+        tableView.backgroundView = backgroundView
 
         guard let url = videoStreamURL else { return }
 
@@ -26,6 +32,11 @@ class EventsViewController: UITableViewController {
                 if let events = events {
                     weakSelf.events = events
                     weakSelf.tableView.reloadSections(IndexSet(integer: 0), with: .fade)
+                    weakSelf.backgroundView.stopLoadingOperation()
+
+                    if events.count == 0 {
+                        weakSelf.backgroundView.message = "No Events Found"
+                    }
                 }
             }
         }
@@ -40,6 +51,12 @@ extension EventsViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if events.count > 0 {
+            hideBackgroundView()
+        } else {
+            showBackgroundView()
+        }
+
         return events.count
     }
 
