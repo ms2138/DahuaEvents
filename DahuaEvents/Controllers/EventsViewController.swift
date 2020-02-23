@@ -69,3 +69,18 @@ extension EventsViewController {
         }
     }
 }
+
+extension EventsViewController {
+    // MARK: - Time and Date
+
+    func timeDifference(first: Date, second: Date) -> TimeInterval {
+        return second.timeIntervalSince(first)
+    }
+
+    func formatDate(date: String, format: String) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+
+        return dateFormatter.date(from: date)
+    }
+}
