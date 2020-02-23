@@ -15,6 +15,8 @@ class EventsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Events"
+
         guard let url = videoStreamURL else { return }
 
         loadEvents(for: url) { [weak self] events in
